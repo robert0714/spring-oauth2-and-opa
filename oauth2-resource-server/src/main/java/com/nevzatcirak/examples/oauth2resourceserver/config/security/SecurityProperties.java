@@ -55,4 +55,5 @@ public class SecurityProperties {
 	public void setIssuerUri(String issuerUri) {
 		this.issuerUri = issuerUri;
 	}
+	
 }
