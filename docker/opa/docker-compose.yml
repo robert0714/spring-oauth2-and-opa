@@ -3,7 +3,7 @@ version: '2.4'
 services:
   opa:
     container_name: opa
-    image: openpolicyagent/opa:0.22.0
+    image: openpolicyagent/opa:0.25.2
     ports:
       - 8181:8181
     # WARNING: OPA is NOT running with an authorization policy configured. This
