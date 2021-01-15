@@ -25,6 +25,16 @@ spring:
           issuer-uri: ${auth.issuer-uri}
           jwk-set-uri: "${auth.issuer-uri}/protocol/openid-connect/certs"
 ```
+### Keycloak's Realm  Configuration
+In the example,we use the Master realm to configure Client named "React".   
+| Column              | value                   |
+|---------------------|-------------------------|
+| Client ID           | react                   |
+| Client Protocol     | openid-connect          |
+| Root URL            | http://localhost:3000/  |
+| Valid Redirect URIs | http://localhost:3000/* |
+| Admin URL           | http://localhost:3000/  |
+| Web Origins         | http://localhost:3000   |
 
 ## [Open Policy Agent](https://www.openpolicyagent.org/docs/latest/)
 While configuring OPA in Spring Security. We are using AccessDecisionManager and AccessDecisionVoter feature. In this repository, There is a simple implementation of an [AccessDecisionVoter for Spring Security](https://docs.spring.io/spring-security/site/docs/4.2.4.RELEASE/reference/htmlsingle/#authz-voting-based) that uses OPA for making authorization decisions. 

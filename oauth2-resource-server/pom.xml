@@ -67,11 +67,14 @@
                         <image>openjdk:8-jdk-alpine</image>
                     </from>
                     <to>
-                        <image>nevzatcirak/spring-security-oauth2-resource-server-demo</image>
+                        <image>robert0714/spring-security-oauth2-resource-server-demo</image>
                         <tags>
                             <tag>latest</tag>
                         </tags>
                     </to>
+                    <container>
+                        <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+                    </container>
                 </configuration>
             </plugin>
         </plugins>
