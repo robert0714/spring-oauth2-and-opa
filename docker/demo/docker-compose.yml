@@ -3,7 +3,7 @@ version: '2.4'
 services:
   oauth2-resource-and-opa:
     container_name: oauth2-resource-and-opa
-    image: nevzatcirak/spring-security-oauth2-and-opa-demo:latest
+    image: robert0714/spring-security-oauth2-and-opa-demo:latest
     environment:
       - AUTH_HOSTNAME=keycloak
       - OPA_HOSTNAME=opa
@@ -17,7 +17,7 @@ services:
 
   oauth2-resource-server:
     container_name: oauth2-resource-server
-    image: nevzatcirak/spring-security-oauth2-resource-server-demo:latest
+    image: robert0714/spring-security-oauth2-resource-server-demo:latest
     ports:
       - 8089:8089
     environment:

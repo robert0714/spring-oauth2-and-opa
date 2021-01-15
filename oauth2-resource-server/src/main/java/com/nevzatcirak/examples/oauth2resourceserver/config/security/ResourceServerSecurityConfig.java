@@ -47,16 +47,27 @@ package com.nevzatcirak.examples.oauth2resourceserver.config.security;
 			 }
 		 }	
 	 protected void configure(HttpSecurity http) throws Exception {
-     ((HttpSecurity)((HttpSecurity)http
+     (http
        .cors()
        .configurationSource(corsConfigurationSource())
-       .and())
+       .and()
        .sessionManagement()
-       .sessionAuthenticationStrategy((SessionAuthenticationStrategy)new NullAuthenticatedSessionStrategy())
+       .sessionAuthenticationStrategy( new NullAuthenticatedSessionStrategy() )
        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
        .and())
-       .authorizeRequests(authorizeRequests -> ((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl)authorizeRequests.anyRequest()).authenticated())
-     .oauth2ResourceServer(httpSecurityOAuth2ResourceServerConfigurer -> httpSecurityOAuth2ResourceServerConfigurer.jwt( ));
+		.authorizeRequests(
+				authorizeRequests -> ((ExpressionUrlAuthorizationConfigurer.AuthorizedUrl) authorizeRequests
+										.anyRequest()).authenticated()
+				)
+       .oauth2ResourceServer(oauth2ResourceServer -> 
+      			oauth2ResourceServer
+      				.jwt(jwt -> jwt
+      						.decoder(jwtDecoder())
+      						.jwkSetUri(jwkSetUri)
+      						.jwtAuthenticationConverter(grantedAuthoritiesExtractorConverter())
+                            )
+
+            );
    }	
 	
 	@Bean

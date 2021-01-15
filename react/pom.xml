@@ -67,7 +67,7 @@
                 </executions>
                 <configuration>
                     <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-                    <repository>nevzatcirak/${project.artifactId}</repository>
+                    <repository>robert0714/${project.artifactId}</repository>
                     <tag>latest</tag>
                     <dockerfile>./Dockerfile</dockerfile>
                 </configuration>

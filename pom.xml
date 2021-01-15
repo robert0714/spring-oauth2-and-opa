@@ -49,7 +49,7 @@
             <dependency>
                 <groupId>com.google.cloud</groupId>
                 <artifactId>libraries-bom</artifactId>
-                <version>16.2.1</version>
+                <version>16.2.1</version> 
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -61,13 +61,13 @@
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
                 <artifactId>jib-maven-plugin</artifactId>
-                <version>2.7.1</version>
+                <version>2.7.1</version> 
                 <configuration>
                     <from>
                         <image>openjdk:8-jdk-alpine</image>
                     </from>
                     <to>
-                        <image>nevzatcirak/spring-security-oauth2-and-opa-demo</image>
+                        <image>robert0714/spring-security-oauth2-and-opa-demo</image>
                         <tags>
                             <tag>latest</tag>
                         </tags>
